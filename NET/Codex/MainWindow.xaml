@@ -1,0 +1,32 @@
+﻿<Window x:Class="Codex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Codex"
+        mc:Ignorable="d"
+        Title="CODEX" Height="350" Width="550">
+    <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="0.1*"></ColumnDefinition>
+      <ColumnDefinition></ColumnDefinition>
+      <ColumnDefinition Width="0.1*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="0.2*"></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition Height="0.2*"></RowDefinition>
+    </Grid.RowDefinitions>
+      <Image Grid.Column="1" Source="Img\avatar.png" Margin="5" />
+    <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+      <TextBlock Width="300" Margin="20" TextWrapping="WrapWithOverflow" >Seleccione el archivos que desea cifrar. El archivo cifrado se copiara en la misma carpeta origen del archivo original</TextBlock>
+      <Button Width="100" Height="30" Click="Button_Click_1">Seleccionar</Button>
+      <TextBlock>Archivo seleccionado:</TextBlock>
+      <TextBox FontWeight="Bold" IsReadOnly="True" FontSize="16" Name="textblock_selected_file" Margin="10"></TextBox>
+      <WrapPanel HorizontalAlignment="Center">
+        <Button Name="butto_encrypt" Width="100" Height="30" Click="Button_Click">CIFRAR</Button>
+        <Button Name="butto_decrypt" Width="100" Height="30" Click="Button_decrypt_Click">DESCIFRAR</Button>
+      </WrapPanel>
+    </StackPanel>
+  </Grid>
+</Window>
